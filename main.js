@@ -1,3 +1,8 @@
+'use strict';
+const electron = require("electron");
+
+const window = electron;
+
 window.start_loader = function() {
     const loader = document.getElementById('loader-holder')
     loader.style.display = 'flex';
