@@ -20,19 +20,15 @@
         <h1 id="app-title">Electricity Bill</h1>
         <div id="form-holder">
         <div id="main-box">
-        <form action="" id="calculate-loan-form">
+        <form action="" id="bill_form">
             <div class="form-item">
-                <label for="loan-amount"><b>Number of Units</b></label>
-                <input type="number" step="any" min="0" name="loan-amount" id="loan-amount" placeholder="xxxxx" class="input-item text-right" required>
+                <label for="billing_units"><b>Number of Units</b></label>
+                <input type="number" step="any" min="0" name="billing_units" id="billing_units" placeholder="xxxxx" class="input-item text-right" required>
             </div>
             <div class="form-item">
-                <label for="loan-interest"><b>Billing Period</b>
+                <label for="billing_period"><b>Billing Period</b>
                 <small>(%)</small></label>
-                <input type="number" step="any" name="loan-interest" id="loan-interest" placeholder="x" class="input-item text-right" required>
-            </div>
-            <div class="form-item">
-                <label for="loan-years"><b>Years to Pay</b></label>
-                <input type="number" step="any" min="1" name="loan-years" id="loan-years" placeholder="x" class="input-item text-right" required>
+                <input type="number" step="any" name="billing_period" id="billing_period" placeholder="x" class="input-item text-right" required>
             </div>
             <div class="form-item">
                 <button class="btn-block" id="calculate-btn" type="submit">Calucate</button>
@@ -47,11 +43,11 @@
             <tbody>
             <tr>
                 <td class=""><b>Amount of Bill without VAT </b></td>
-                <td class="text-right" id="amount-bill"></td>
+                <td class="text-right" id="amount_bill"></td>
             </tr>
             <tr>
                 <td class=""><b>Total Payable VAT</b></td>
-                <td class="text-right" id="total-payable"></td>
+                <td class="text-right" id="total_payable"></td>
             </tr>
             </tbody>
         </table>
