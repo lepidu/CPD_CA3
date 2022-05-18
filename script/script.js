@@ -20,14 +20,17 @@ window.onload = function() {
         const BillingPeriod = document.getElementById('billing_period').value;
         var totalPayable = 0,
             amountOfBillWithoutVAT = 0;
+            totalPerYear = 0;
+            amountOfBillYear = 0;
             amountOfBillWithoutVAT = ((parseFloat(numberUnits) * 0.20) + (parseFloat(BillingPeriod)  * 0.04));
             totalPayable = (parseFloat(amountOfBillWithoutVAT) + (parseFloat(amountOfBillWithoutVAT)* 13.5)/100);
-        
+            amountOfBillYear = ((parseFloat(numberUnits) * 0.20) + (365 * 0.04) );
+            totalPerYear = (parseFloat(amountOfBillYear) + (parseFloat(amountOfBillYear)* 13.5)/100);
         setTimeout(() => {
             document.getElementById('amount_bill').textContent = parseFloat(amountOfBillWithoutVAT).toLocaleString("en-US")
             document.getElementById('total_payable').textContent = parseFloat(totalPayable).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 }) + "%";
-            
-            document.getElementById('result').style.display = 'table';
+            document.getElementById('total_per_year').textContent = parseFloat(totalPerYear).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 }) + "%";
+             document.getElementById('result').style.display = 'table';
             document.getElementById('reset-btn').style.display = 'block';
             end_loader()
         }, 500)
@@ -39,6 +42,7 @@ window.onload = function() {
 
             document.getElementById('amount_bill').textContent = ""
             document.getElementById('total_payable').textContent = ""
+            document.getElementById('total_per_year').textContent = ""
             document.getElementById('result').style.display = 'none';
             document.getElementById('reset-btn').style.display = 'none';
            
