@@ -2,7 +2,7 @@
     "name": "CPD_CA3",
     "version": "1.0.0",
     "description": "Practical&Theorical",
-    "main": "script/script.js",
+    "main": "main.js",
     "scripts": {
         "start": "electron ."
     },
