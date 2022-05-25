@@ -1,0 +1,39 @@
+<!-- Main page of the application, using as a base a bootstrap design with modifications that will adapt to CA3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Connection with layout formatting and CSS style -->
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Leisly 2020303 & Erick 2020324</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"  integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"  crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"/> 
+    </head>
+  <body>
+    <!-- User data entry -->
+    <nav class="navbar blue z-depth-4">
+      <h2>Electricity Bill</h2>
+    </nav>
+    <div class="main">
+      <form action="" id="billForm">
+            <label for="billing_units"><b>Billing Units</b></label>
+            <input type="number" step="any" min="0" name="billing_units" id="billing_units" placeholder="xxx" class="input-item text-right" required>
+            <label for="billing_period"><b>Billing Period</b></label>
+            <input type="number" step="any" name="billing_period" id="billing_period" placeholder="x" class="input-item text-right" required>        
+            <input type="submit" id="submit" class="btn blue z-depth-4" value="Calculate">
+      </form>
+    </div>
+    <div class="container">
+      <div class="icons">
+        <h5><i class="fas fa-money-bill-wave-alt"></i></h5> 
+        <h5><i class="fas fa-wallet"></i></h5>  
+      </div>
+    </div>
+    <!-- Connection with bill javascript, which takes user input -->
+    <script type="module" src="bill.js"></script>
+  </body>
+</html>
+<!-- This file kept a format similar to Tutorial 11 seen in class -->

@@ -1,0 +1,46 @@
+<!-- This document will show the total result to be paid to the user -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Connection with layout formatting and CSS style -->
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Leisly 2020303 & Erick 2020324</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"  integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"  crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"/> 
+    </head>
+    <!-- The final result will be shown in this section with the identifier ID -->
+  <body>
+    <nav class="navbar blue z-depth-4">
+      <h2>Electricity Bill</h2>
+    </nav>
+    <div class="container">
+      <div class="icons">
+        <h5><i class="fas fa-money-bill-wave-alt"></i></h5> 
+        <h5><i class="fas fa-wallet"></i></h5>  
+      </div>
+      <table id="result">
+        <colgroup>
+        <col width="50%">
+       <col width="50%">
+        </colgroup>
+       <tbody>
+       <tr>
+        <td class=""><b>Amount out VAT</b></td>
+        <td class="text-right" id="totalOutVAT"></td>
+        </tr>
+       <tr>
+        <td class=""><b>Total amount VAT</b></td>
+       <td class="text-right" id="totalVAT"></td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <!-- Connection with cal javascript, which gives the total amount of result -->
+    <script src="cal.js"></script>
+  </body>
+</html>
+<!-- This document was designed taking into consideration the fields of Tutorial 11 seen in class. -->
